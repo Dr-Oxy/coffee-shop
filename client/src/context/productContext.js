@@ -73,7 +73,7 @@ export const ProductProvider = (props) => {
       title: 'Black Eye',
       price: '450',
       unit: 'per/cup',
-      img: '/images/espresso.png',
+      img: '/images/expresso.png',
       isFave: false,
     },
   ]);

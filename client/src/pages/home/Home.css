@@ -36,7 +36,7 @@
 }
 
 .home-page .favourites .fave-menu-wrap .see-all {
-  margin: 30px 0 20px;
+  margin: 30px 0;
 }
 
 @media screen and (min-width: 768px) {
