@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
 import { FaShoppingCart } from 'react-icons/fa';
 
+import { CartContext } from '../../context/cartContext';
+
 const Header = () => {
+  const { cart } = useContext(CartContext);
+
   return (
     <header>
       <div className="logo">TasteBud</div>
@@ -27,7 +31,7 @@ const Header = () => {
             </Link>
           </li>
         </nav>
-        <div className="cart-num">3</div>
+        <div className="cart-num">{cart.length}</div>
       </ul>
     </header>
   );

@@ -8,7 +8,7 @@ import { ProductContext } from '../../context/productContext';
 import { Button } from '../../components/button/Button';
 import Product from '../../components/product/Product';
 
-const Home = () => {
+const Home = ({ onAdd }) => {
   const { products } = useContext(ProductContext);
 
   return (
@@ -19,9 +19,11 @@ const Home = () => {
           Get a wide variety of coffee options from our delicately crafted menu.
         </p>
 
-        <Button buttonStyle="btn--primary--color" buttonSize="btn--medium">
-          See Menu
-        </Button>
+        <Link to="/menu">
+          <Button buttonStyle="btn--primary--color" buttonSize="btn--medium">
+            See Menu
+          </Button>
+        </Link>
       </div>
 
       <div className="favourites">
@@ -32,7 +34,7 @@ const Home = () => {
             {products.map(
               (product) =>
                 product.isFave && (
-                  <Product key={product.id} product={product} />
+                  <Product key={product.id} product={product} onAdd={onAdd} />
                 ),
             )}
           </div>

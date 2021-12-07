@@ -10,7 +10,7 @@ const STYLES = [
 
 const SIZES = ['btn--medium', 'btn--small'];
 
-export const Button = ({ children, buttonStyle, buttonSize }) => {
+export const Button = ({ children, buttonStyle, buttonSize, onClick }) => {
   //checks if button style  or size exist, if not falls back to the first style child
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
@@ -19,7 +19,10 @@ export const Button = ({ children, buttonStyle, buttonSize }) => {
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
   return (
-    <button className={`btn ${checkButtonStyle} ${checkButtonSize}`}>
+    <button
+      className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

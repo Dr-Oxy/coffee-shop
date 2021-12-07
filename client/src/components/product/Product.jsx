@@ -4,7 +4,7 @@ import './Product.css';
 import { Button } from '../button/Button';
 import { FaStar } from 'react-icons/fa';
 
-const Product = ({ product }) => {
+const Product = ({ product, onAdd }) => {
   return (
     <div className="product-card">
       <div className="card-img">
@@ -27,7 +27,9 @@ const Product = ({ product }) => {
       </div>
 
       <div className="card-action">
-        <Button buttonSize="btn--small">Add to Cart</Button>
+        <Button onClick={() => onAdd(product)} buttonSize="btn--small">
+          Add to Cart
+        </Button>
       </div>
     </div>
   );

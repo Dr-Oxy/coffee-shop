@@ -1,7 +1,7 @@
 :root {
   --primary: rgb(68, 2, 2);
   --secondary: rgb(204, 120, 82);
-  --light: #fdfdfd;
+  --light: #e6e6e6;
 }
 
 .btn {
@@ -32,7 +32,7 @@
 
 .btn--outline--color {
   background: var(--light);
-  color: var(--light);
+  color: var(--primary);
   border: 1px var(--primary) solid;
 }
 

@@ -1,0 +1,40 @@
+.cart-empty {
+  margin-top: 75px;
+  max-width: 1024px;
+
+  background-color: white;
+}
+
+.cart {
+  margin-top: 75px;
+  padding: 20px;
+  max-width: 1024px;
+
+  background-color: white;
+}
+
+.cart h1 {
+  margin: 15px 0;
+}
+
+.cart .cart-grid {
+  margin-bottom: 20px;
+}
+
+.cart .tots {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.cart .tots h3 {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+  .cart,
+  .cart-empty {
+    margin: 75px auto 0;
+  }
+}
