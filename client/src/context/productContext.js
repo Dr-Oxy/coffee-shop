@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 
-const ProductContext = createContext();
+export const ProductContext = createContext();
 
 export const ProductProvider = (props) => {
   const [products] = useState([
@@ -10,6 +10,7 @@ export const ProductProvider = (props) => {
       price: '500',
       unit: 'per/cup',
       img: '/images/americano.png',
+      isFave: false,
     },
     {
       id: '2',
@@ -17,13 +18,15 @@ export const ProductProvider = (props) => {
       price: '750',
       unit: 'per/cup',
       img: '/images/cappuccino.png',
+      isFave: true,
     },
     {
       id: '3',
       title: 'Espresso',
       price: '400',
       unit: 'per/cup',
-      img: '/images/espresso.png',
+      img: '/images/expresso.png',
+      isFave: false,
     },
     {
       id: '4',
@@ -31,6 +34,7 @@ export const ProductProvider = (props) => {
       price: '800',
       unit: 'per/cup',
       img: '/images/latte.png',
+      isFave: true,
     },
     {
       id: '5',
@@ -38,6 +42,7 @@ export const ProductProvider = (props) => {
       price: '600',
       unit: 'per/cup',
       img: '/images/macchiato.png',
+      isFave: false,
     },
     {
       id: '6',
@@ -45,6 +50,7 @@ export const ProductProvider = (props) => {
       price: '650',
       unit: 'per/cup',
       img: '/images/iced_cold_brew.png',
+      isFave: true,
     },
     {
       id: '7',
@@ -52,6 +58,7 @@ export const ProductProvider = (props) => {
       price: '700',
       unit: 'per/cup',
       img: '/images/frappuccino.png',
+      isFave: true,
     },
     {
       id: '8',
@@ -59,6 +66,15 @@ export const ProductProvider = (props) => {
       price: '1000',
       unit: 'per/cup',
       img: '/images/caffe-mocha.png',
+      isFave: true,
+    },
+    {
+      id: '9',
+      title: 'Black Eye',
+      price: '450',
+      unit: 'per/cup',
+      img: '/images/espresso.png',
+      isFave: false,
     },
   ]);
 

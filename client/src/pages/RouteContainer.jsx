@@ -8,6 +8,7 @@ import Cart from './cart/Cart';
 
 //Import component
 import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 
 const RouteContainer = () => {
   return (
@@ -19,6 +20,7 @@ const RouteContainer = () => {
           <Route exact path="/menu" element={<Menu />} />
           <Route exact path="/cart" element={<Cart />} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );
