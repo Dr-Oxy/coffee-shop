@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import './CartItem.css';
 
 import { Button } from '../button/Button';
+import { CartContext } from '../../context/cartContext';
 
-const CartItem = ({ item, onAdd, onRemove, delProduct }) => {
+const CartItem = ({ item }) => {
   const subTotal = item.price * item.qty;
+
+  const { onAdd, onRemove, delProduct } = useContext(CartContext);
 
   return (
     <div className="cart-items-card">

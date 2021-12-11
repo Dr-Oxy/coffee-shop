@@ -1,14 +1,16 @@
 import React, { useContext } from 'react';
 
 import { ProductContext } from '../../context/productContext';
+import { CartContext } from '../../context/cartContext';
 
 import './Product.css';
 
 import { Button } from '../button/Button';
 import { FaStar } from 'react-icons/fa';
 
-const Product = ({ product, onAdd }) => {
-  const { isShown } = useContext(ProductContext);
+const Product = ({ product }) => {
+  const { isShown, displayOverlay } = useContext(ProductContext);
+  const { onAdd } = useContext(CartContext);
 
   return (
     <div className="product-card animate__animated animate__bounceInLeft">
@@ -32,7 +34,13 @@ const Product = ({ product, onAdd }) => {
       </div>
 
       <div className="card-action">
-        <Button onClick={() => onAdd(product)} buttonSize="btn--small">
+        <Button
+          onClick={() => {
+            onAdd(product);
+            displayOverlay(product.id);
+          }}
+          buttonSize="btn--small"
+        >
           Add to Cart
         </Button>
       </div>

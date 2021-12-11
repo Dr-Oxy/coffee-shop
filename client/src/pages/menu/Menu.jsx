@@ -20,7 +20,7 @@ const Menu = ({ onAdd }) => {
 
       <div className="all-menu-wrap">
         {products.map((product) => (
-          <Product product={product} key={product.id} onAdd={onAdd} />
+          <Product product={product} key={product.id} />
         ))}
       </div>
     </div>

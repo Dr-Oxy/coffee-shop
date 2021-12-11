@@ -17,17 +17,17 @@ const Header = () => {
 
       <nav className="nav-bar">
         <li>
-          <NavLink exact activeClassName="active" to="/">
+          <NavLink exact="true" activeclassname="active" to="/">
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink activeClassName="active" to="/menu">
+          <NavLink activeclassname="active" to="/menu">
             Menu
           </NavLink>
         </li>
         <li className="cart-link">
-          <NavLink activeClassName="active" to="/cart">
+          <NavLink activeclassname="active" to="/cart">
             <FaShoppingBag className="shop-bag" />
           </NavLink>
 

@@ -11,6 +11,7 @@ export const ProductProvider = (props) => {
       unit: 'per/cup',
       img: '/images/americano.png',
       isFave: false,
+      IsShown: false,
     },
     {
       id: '2',
@@ -19,6 +20,7 @@ export const ProductProvider = (props) => {
       unit: 'per/cup',
       img: '/images/cappuccino.png',
       isFave: true,
+      IsShown: false,
     },
     {
       id: '3',
@@ -27,6 +29,7 @@ export const ProductProvider = (props) => {
       unit: 'per/cup',
       img: '/images/expresso.png',
       isFave: false,
+      IsShown: false,
     },
     {
       id: '4',
@@ -77,10 +80,22 @@ export const ProductProvider = (props) => {
       isFave: false,
     },
   ]);
-
   const [isShown, setIsShown] = useState(false);
+
+  const displayOverlay = (id) => {
+    const targEl = products.find((x) => x.id === id);
+
+    if (targEl) {
+      setIsShown(true);
+
+      setTimeout(() => {
+        setIsShown(false);
+      }, 1000);
+    }
+  };
+
   return (
-    <ProductContext.Provider value={{ products, isShown, setIsShown }}>
+    <ProductContext.Provider value={{ products, isShown, displayOverlay }}>
       {props.children}
     </ProductContext.Provider>
   );

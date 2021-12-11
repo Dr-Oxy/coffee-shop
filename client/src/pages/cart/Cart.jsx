@@ -8,7 +8,7 @@ import './Cart.css';
 import CartItem from '../../components/cartItem/CartItem';
 import { Button } from '../../components/button/Button';
 
-const Cart = ({ onAdd, onRemove, delProduct }) => {
+const Cart = () => {
   const { cart } = useContext(CartContext);
 
   //Total cart
@@ -36,13 +36,7 @@ const Cart = ({ onAdd, onRemove, delProduct }) => {
 
         <div className="cart-grid">
           {cart.map((item) => (
-            <CartItem
-              item={item}
-              key={item.id}
-              onAdd={onAdd}
-              onRemove={onRemove}
-              delProduct={delProduct}
-            />
+            <CartItem item={item} key={item.id} />
           ))}
         </div>
 
