@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { CartContext } from '../context/cartContext';
+import { ProductContext } from '../context/productContext';
 
 //Import Pages
 import Home from './home/Home';
@@ -14,6 +15,7 @@ import Footer from '../components/footer/Footer';
 
 const RouteContainer = () => {
   const { cart, setCart } = useContext(CartContext);
+  const { setIsShown, products } = useContext(ProductContext);
 
   //add item to cart
   const onAdd = (product) => {
@@ -30,7 +32,20 @@ const RouteContainer = () => {
     } else {
       //if product doesn't exist in cart, add to cart
       setCart([...cart, { ...product, qty: 1 }]);
+
+      displayOverlay(product.id);
+
+      setTimeout(() => {
+        setIsShown(false);
+      }, 1000);
     }
+  };
+
+  //Display overlay when add to cart is clicked
+  const displayOverlay = (id) => {
+    const targetEl = products.find((x) => x.id === id);
+
+    setIsShown(targetEl ? true : false);
   };
 
   //Remove item from cart
@@ -48,6 +63,14 @@ const RouteContainer = () => {
     }
   };
 
+  const delProduct = (product) => {
+    const itemExist = cart.find((x) => x.id === product.id);
+
+    if (itemExist) {
+      setCart(cart.filter((x) => x.id !== product.id));
+    }
+  };
+
   return (
     <BrowserRouter>
       <div className="route-container">
@@ -58,7 +81,9 @@ const RouteContainer = () => {
           <Route
             exact
             path="/cart"
-            element={<Cart onAdd={onAdd} onRemove={onRemove} />}
+            element={
+              <Cart onAdd={onAdd} onRemove={onRemove} delProduct={delProduct} />
+            }
           />
         </Routes>
         <Footer />

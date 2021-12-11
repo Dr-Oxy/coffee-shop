@@ -3,9 +3,17 @@
   max-width: 1024px;
 
   background-color: white;
+  text-align: center;
+
+  padding: 20px;
+}
+
+.cart-empty p {
+  margin: 20px 0;
 }
 
 .cart {
+  font-family: 'Open sans';
   margin-top: 75px;
   padding: 20px;
   max-width: 1024px;
@@ -30,6 +38,17 @@
 
 .cart .tots h3 {
   margin-right: 10px;
+}
+
+.cart .tots span {
+  font-size: 24px;
+  color: rgb(68, 2, 2);
+}
+
+.cart .cart-check-action {
+  text-align: right;
+  margin-top: 10px;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 1000px) {

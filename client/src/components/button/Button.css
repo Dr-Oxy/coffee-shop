@@ -1,7 +1,7 @@
 :root {
   --primary: rgb(68, 2, 2);
   --secondary: rgb(204, 120, 82);
-  --light: #e6e6e6;
+  --light: #fff;
 }
 
 .btn {

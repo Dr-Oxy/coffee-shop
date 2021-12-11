@@ -15,7 +15,7 @@ export const ProductProvider = (props) => {
     {
       id: '2',
       title: 'Cappuccino',
-      price: '750',
+      price: '800',
       unit: 'per/cup',
       img: '/images/cappuccino.png',
       isFave: true,
@@ -23,7 +23,7 @@ export const ProductProvider = (props) => {
     {
       id: '3',
       title: 'Espresso',
-      price: '400',
+      price: '550',
       unit: 'per/cup',
       img: '/images/expresso.png',
       isFave: false,
@@ -39,7 +39,7 @@ export const ProductProvider = (props) => {
     {
       id: '5',
       title: 'Macchiato',
-      price: '600',
+      price: '700',
       unit: 'per/cup',
       img: '/images/macchiato.png',
       isFave: false,
@@ -47,7 +47,7 @@ export const ProductProvider = (props) => {
     {
       id: '6',
       title: 'Iced Cold Brew',
-      price: '650',
+      price: '600',
       unit: 'per/cup',
       img: '/images/iced_cold_brew.png',
       isFave: true,
@@ -55,7 +55,7 @@ export const ProductProvider = (props) => {
     {
       id: '7',
       title: 'Frappuccino',
-      price: '700',
+      price: '1150',
       unit: 'per/cup',
       img: '/images/frappuccino.png',
       isFave: true,
@@ -63,7 +63,7 @@ export const ProductProvider = (props) => {
     {
       id: '8',
       title: 'Caffé Mocha',
-      price: '1000',
+      price: '1250',
       unit: 'per/cup',
       img: '/images/caffe-mocha.png',
       isFave: true,
@@ -78,8 +78,9 @@ export const ProductProvider = (props) => {
     },
   ]);
 
+  const [isShown, setIsShown] = useState(false);
   return (
-    <ProductContext.Provider value={{ products }}>
+    <ProductContext.Provider value={{ products, isShown, setIsShown }}>
       {props.children}
     </ProductContext.Provider>
   );

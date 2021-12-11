@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingBag } from 'react-icons/fa';
 
 import { CartContext } from '../../context/cartContext';
 
@@ -11,28 +11,31 @@ const Header = () => {
 
   return (
     <header>
-      <div className="logo">TasteBud</div>
+      <div className="logo">
+        <p>TasteBud</p>
+      </div>
 
-      <ul>
-        <nav className="nav-bar">
-          <li>
-            <Link className="nav-link" to="/">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/menu">
-              Menu
-            </Link>
-          </li>
-          <li className="cart-link">
-            <Link className="nav-link" to="/cart">
-              <FaShoppingCart />
-            </Link>
-          </li>
-        </nav>
-        <div className="cart-num">{cart.length}</div>
-      </ul>
+      <nav className="nav-bar">
+        <li>
+          <NavLink exact activeClassName="active" to="/">
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink activeClassName="active" to="/menu">
+            Menu
+          </NavLink>
+        </li>
+        <li className="cart-link">
+          <NavLink activeClassName="active" to="/cart">
+            <FaShoppingBag className="shop-bag" />
+          </NavLink>
+
+          <div className="cart-num">
+            <p>{cart.length}</p>
+          </div>
+        </li>
+      </nav>
     </header>
   );
 };

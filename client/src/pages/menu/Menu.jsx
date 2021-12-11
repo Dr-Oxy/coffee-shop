@@ -12,7 +12,7 @@ const Menu = ({ onAdd }) => {
   return (
     <div className="menu">
       <h1>Our Exciting Menu</h1>
-      <p>
+      <p className="desc">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
         deleniti? Libero deleniti voluptatem eos fugiat magnam expedita
         perferendis.

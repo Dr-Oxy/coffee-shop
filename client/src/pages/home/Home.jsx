@@ -13,8 +13,11 @@ const Home = ({ onAdd }) => {
 
   return (
     <div className="home-page">
-      <div className="showcase">
-        <h1>Welcome to TasteBud Café</h1>
+      <div
+        className="showcase"
+        style={{ backgroundImage: 'url(/images/cafe.jpg)' }}
+      >
+        <h1>TasteBud Café</h1>
         <p>
           Get a wide variety of coffee options from our delicately crafted menu.
         </p>
@@ -27,7 +30,7 @@ const Home = ({ onAdd }) => {
       </div>
 
       <div className="favourites">
-        <h2>Our Favourite Menu</h2>
+        <h2>Recommended Menu</h2>
 
         <div className="fave-menu-wrap">
           <div className="fave-menu-grid">

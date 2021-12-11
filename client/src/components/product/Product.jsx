@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { ProductContext } from '../../context/productContext';
+
 import './Product.css';
 
 import { Button } from '../button/Button';
 import { FaStar } from 'react-icons/fa';
 
 const Product = ({ product, onAdd }) => {
+  const { isShown } = useContext(ProductContext);
+
   return (
-    <div className="product-card">
+    <div className="product-card animate__animated animate__bounceInLeft">
       <div className="card-img">
         <img src={product.img} alt={product.title} />
       </div>
@@ -31,6 +36,12 @@ const Product = ({ product, onAdd }) => {
           Add to Cart
         </Button>
       </div>
+
+      {isShown && (
+        <div className="handle-message">
+          <h4>Added to cart</h4>
+        </div>
+      )}
     </div>
   );
 };

@@ -9,6 +9,16 @@
   text-align: center;
 }
 
+.menu h1 {
+  font-family: 'Playfair Display';
+  color: var(--coffee);
+  margin: 20px 0;
+}
+
+.menu p.desc {
+  margin-bottom: 30px;
+}
+
 .menu .all-menu-wrap {
   margin-top: 20px;
   display: grid;
