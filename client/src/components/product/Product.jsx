@@ -1,16 +1,21 @@
-import React, { useContext } from 'react';
-
-import { ProductContext } from '../../context/productContext';
-import { CartContext } from '../../context/cartContext';
-
 import './Product.css';
 
+import React, { useContext, useState } from 'react';
+
 import { Button } from '../button/Button';
+import { CartContext } from '../../context/cartContext';
 import { FaStar } from 'react-icons/fa';
 
 const Product = ({ product }) => {
-  const { isShown, displayOverlay } = useContext(ProductContext);
   const { onAdd } = useContext(CartContext);
+  const [currProductId, setCurrProductId] = useState(null);
+
+  const displayOverlay = (id) => {
+    setCurrProductId(id);
+    setTimeout(() => {
+      setCurrProductId(null);
+    }, 1000);
+  };
 
   return (
     <div className="product-card animate__animated animate__bounceInLeft">
@@ -45,7 +50,7 @@ const Product = ({ product }) => {
         </Button>
       </div>
 
-      {isShown && (
+      {currProductId === product.id && (
         <div className="handle-message">
           <h4>Added to cart</h4>
         </div>

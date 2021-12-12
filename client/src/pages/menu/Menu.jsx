@@ -6,7 +6,7 @@ import './Menu.css';
 
 import Product from '../../components/product/Product';
 
-const Menu = ({ onAdd }) => {
+const Menu = () => {
   const { products } = useContext(ProductContext);
 
   return (
@@ -17,7 +17,6 @@ const Menu = ({ onAdd }) => {
         deleniti? Libero deleniti voluptatem eos fugiat magnam expedita
         perferendis.
       </p>
-
       <div className="all-menu-wrap">
         {products.map((product) => (
           <Product product={product} key={product.id} />

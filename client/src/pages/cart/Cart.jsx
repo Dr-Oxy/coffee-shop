@@ -12,10 +12,13 @@ const Cart = () => {
   const { cart } = useContext(CartContext);
 
   //Total cart
-  const totalPrice = cart.reduce(
+  const sumPrice = cart.reduce(
     (price, item) => price + item.qty * item.price,
     0,
   );
+
+  //separates the digit with a comma
+  const totalPrice = new Intl.NumberFormat().format(sumPrice);
 
   if (cart.length === 0 || cart === null) {
     return (

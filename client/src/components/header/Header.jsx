@@ -27,13 +27,12 @@ const Header = () => {
           </NavLink>
         </li>
         <li className="cart-link">
-          <NavLink activeclassname="active" to="/cart">
+          <NavLink activeclassname="activeLink" to="/cart">
             <FaShoppingBag className="shop-bag" />
+            <div className="cart-num">
+              <p>{cart.length}</p>
+            </div>
           </NavLink>
-
-          <div className="cart-num">
-            <p>{cart.length}</p>
-          </div>
         </li>
       </nav>
     </header>

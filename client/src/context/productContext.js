@@ -80,22 +80,9 @@ export const ProductProvider = (props) => {
       isFave: false,
     },
   ]);
-  const [isShown, setIsShown] = useState(false);
-
-  const displayOverlay = (id) => {
-    const targEl = products.find((x) => x.id === id);
-
-    if (targEl) {
-      setIsShown(true);
-
-      setTimeout(() => {
-        setIsShown(false);
-      }, 1000);
-    }
-  };
 
   return (
-    <ProductContext.Provider value={{ products, isShown, displayOverlay }}>
+    <ProductContext.Provider value={{ products }}>
       {props.children}
     </ProductContext.Provider>
   );
