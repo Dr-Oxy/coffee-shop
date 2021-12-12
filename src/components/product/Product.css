@@ -1,0 +1,71 @@
+div.product-card {
+  background-color: #f3f3f4;
+  color: rgb(80, 80, 80);
+  padding: 20px;
+  text-align: left;
+
+  position: relative;
+  transition: all ease 0.3s;
+
+  font-family: 'Open Sans';
+}
+
+.product-card .card-img {
+  height: 200px;
+  width: 200px;
+  margin: 10px auto;
+}
+
+.product-card .card-img img {
+  height: inherit;
+  width: 100%;
+}
+
+.product-card .fave-star {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+
+  font-size: 20px;
+  color: rgb(204, 120, 82);
+}
+
+.product-card .card-details .title {
+  color: rgb(68, 2, 2);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.product-card .card-details .price {
+  display: flex;
+  margin: 15px 0;
+}
+
+.product-card .card-details .price p:first-child {
+  font-weight: 600;
+  color: #111;
+}
+
+.product-card .card-details .price p:nth-child(2) {
+  margin-left: 6px;
+}
+
+.card-action Button {
+  width: 100%;
+}
+
+.product-card .handle-message {
+  background-color: rgba(0, 0, 0, 0.548);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

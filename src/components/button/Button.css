@@ -1,0 +1,55 @@
+:root {
+  --primary: rgb(68, 2, 2);
+  --secondary: rgb(204, 120, 82);
+  --light: #fff;
+}
+
+.btn {
+  border-radius: 4px;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3 ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* button styles color */
+
+.btn--primary--color {
+  background: var(--primary);
+  color: var(--light);
+  border: none;
+}
+
+.btn--secondary--color {
+  background: var(--secondary);
+  color: var(--light);
+  border: none;
+}
+
+.btn--outline--color {
+  background: var(--light);
+  color: var(--primary);
+  border: 1px var(--primary) solid;
+}
+
+.btn--light--color {
+  background: var(--light);
+  color: var(--primary);
+  border: none;
+}
+
+/* button sizes */
+
+.btn--medium {
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.btn--small {
+  padding: 10px 15px;
+  font-size: 16px;
+}

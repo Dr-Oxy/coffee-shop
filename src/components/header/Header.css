@@ -1,0 +1,81 @@
+header {
+  background-color: var(--coffee);
+  color: var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  height: 75px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 1;
+}
+
+header .logo p {
+  margin-top: 10px;
+  font-family: 'Corinthia';
+  font-size: 32px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav li {
+  list-style: none;
+  font-size: 20px;
+}
+
+header nav li:not(:first-child) {
+  margin-left: 30px;
+}
+
+header li a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.active {
+  color: var(--milk);
+}
+
+header nav .cart-link {
+  position: relative;
+}
+
+.shop-bag {
+  font-size: 20px;
+}
+
+header .cart-num {
+  background: var(--milk);
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+}
+
+header .cart-num p {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--light);
+}
+
+@media screen and (min-width: 768px) {
+  header .logo p {
+    font-size: 48px;
+  }
+}

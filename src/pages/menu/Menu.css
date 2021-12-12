@@ -1,0 +1,33 @@
+.menu {
+  margin-top: 75px;
+  max-width: 960px;
+  padding: 20px;
+}
+
+.menu h1,
+.menu p {
+  text-align: center;
+}
+
+.menu h1 {
+  font-family: 'Playfair Display';
+  color: var(--coffee);
+  margin: 20px 0;
+}
+
+.menu p.desc {
+  margin-bottom: 30px;
+}
+
+.menu .all-menu-wrap {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+@media screen and (min-width: 1020px) {
+  .menu {
+    margin: 75px auto 0;
+  }
+}
