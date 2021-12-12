@@ -51,12 +51,19 @@ const Cart = () => {
 
         <div className="cart-check-action">
           <Link to="/menu">
-            <Button buttonStyle="btn--light--color" buttonSize="btn--medium">
-              Back to Menu
-            </Button>
+            <div>
+              <Button
+                buttonStyle="btn--outline--color"
+                buttonSize="btn--medium"
+              >
+                Back to Menu
+              </Button>
+            </div>
           </Link>
 
-          <Button buttonSize="btn--medium">Checkout</Button>
+          <div style={{ marginLeft: '20px' }}>
+            <Button buttonSize="btn--medium">Checkout</Button>
+          </div>
         </div>
       </div>
     );
