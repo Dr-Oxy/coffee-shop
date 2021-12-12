@@ -6,17 +6,19 @@ import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer>
+      <p className="logo">TasteBud Cafe</p>
       <div className="footer-flex">
         <div className="brand">
-          <p className="logo">TasteBud Cafe</p>
           <div className="address">
             <FaMapMarkerAlt />
             <p>No. 24 Old GRA, Port Harcourt.</p>
           </div>
+
           <div className="phone">
             <FaPhoneAlt />
             <p>+234 002 436 0983</p>
           </div>
+
           <div className="email">
             <FaEnvelope />
             <p>tastybudcafe@gmail.com</p>
@@ -32,7 +34,7 @@ const Footer = () => {
         </div>
 
         <div className="socials">
-          <p>Connect with us on:</p>
+          <p>Connect with us</p>
           <ul>
             <li>
               <svg
